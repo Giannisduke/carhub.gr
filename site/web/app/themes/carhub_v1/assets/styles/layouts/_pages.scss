@@ -141,12 +141,17 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   background: url(../images/attributes_luggage.svg) 0px 0px no-repeat !important;
 }
 
-.car-option-tansmission {
-  background: url(../images/attributes_tansmission.svg) 0px 0px no-repeat !important;
+.car-option-transmission {
+  background: url(../images/attributes_transmission.svg) 0px 0px no-repeat !important;
 }
 
 .car-option-air-conditioning {
   background: url(../images/attributes_aircondition.svg) 0px 0px no-repeat !important;
+}
+
+.attribute {
+  color: $brand-red;
+  font-family: 'HelveticaNeue-Bold', sans-serif;
 }
 .carousel-item h3 {
   font-size: 3rem;

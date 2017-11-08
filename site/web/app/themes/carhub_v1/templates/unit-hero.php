@@ -45,9 +45,8 @@
                     <?php do_action ( 'woocommerce_attribute_doors' );  ?>
                     <?php do_action ( 'woocommerce_attribute_passengers' );  ?>
                     <?php do_action ( 'woocommerce_attribute_luggage' );  ?>
-                    <?php do_action ( 'woocommerce_attribute_transmission' );  ?>
                     <?php do_action ( 'woocommerce_attribute_air_conditioning' );  ?>
-                    <?php do_action ( 'woocommerce_attribute_drive_wheel' );  ?>
+                    <?php do_action ( 'woocommerce_attribute_tansmission' );  ?>
 
                   </div>
 
