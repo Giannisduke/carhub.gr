@@ -47,6 +47,7 @@
                     <?php do_action ( 'woocommerce_attribute_luggage' );  ?>
                     <?php do_action ( 'woocommerce_attribute_transmission' );  ?>
                     <?php do_action ( 'woocommerce_attribute_air_conditioning' );  ?>
+                    <?php do_action ( 'woocommerce_attribute_drive_wheel' );  ?>
 
                   </div>
 
@@ -58,7 +59,7 @@
               <?php endwhile; endif; ?>
               <?php wp_reset_query(); ?>
 
-              <?php query_posts('post_type=product&showposts=4&offset=1'); ?>
+              <?php query_posts('post_type=product&showposts=10&offset=1'); ?>
                     <?php if (have_posts()) : while (have_posts()) : the_post(); global $product;?>
                       <div class="carousel-item">
                         <div class="row">

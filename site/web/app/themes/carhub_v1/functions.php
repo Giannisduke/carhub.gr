@@ -115,6 +115,18 @@ echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h
 }
 add_action( 'woocommerce_attribute_air_conditioning', 'show_attributes_air_conditioning' );
 
+function show_attributes_drive_wheel() {
+global $product;
+$product_id = $product->get_id();
+$attribute_slug = 'drive-wheel';
+$array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
+$text = array_shift( $array );
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h5>Drive wheel:' . $text . '</h5></div>';
+}
+add_action( 'woocommerce_attribute_drive_wheel', 'show_attributes_drive_wheel' );
+
+
+
 add_filter( 'woocommerce_add_cart_item_data', 'ps_empty_cart', 10,  3);
 
 function ps_empty_cart( $cart_item_data, $product_id, $variation_id ) {
