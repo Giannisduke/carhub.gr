@@ -61,7 +61,7 @@ type: "POST",
 url: "https://carhub.gr/app/themes/carhub_v1/feedback.php",
 data: $('form.feedback').serialize(),
 success: function(message){
-$(".feedback").html(message);
+$("#feedback").html(message);
 
 },
 error: function(){
