@@ -46,16 +46,13 @@
           </div>
 <hr/>
 <div class="row">
-  <div class="col-4 input-group">
-    <span class="input-group-addon" id="sizing-addon1">@</span>
-<input type="text" class="form-control" name="name" placeholder="Full name" aria-describedby="sizing-addon1">
-  </div>
-  <div class="col-4 input-group  input-daterange">
-    <input type="text" class="form-control" placeholder="Phone" aria-describedby="sizing-addon1">
-  </div>
-  <div class="col-4 input-group">
-    <input type="email" name="email" class="form-control" placeholder="mail" aria-describedby="sizing-addon1">
-  </div>
+  <strong>Name</strong>
+  <br />
+  <input type="text" name="name" class="input-xlarge" value="">
+  <br /><br /><strong>Email</strong><br />
+  <input type="email" name="email" class="input-xlarge" value="">
+  <br /><br /><strong>Message</strong><br />
+  <textarea name="message" class="input-xlarge"></textarea>
 </div>
 </form>
 
