@@ -16,11 +16,11 @@
               <?php if (have_posts()) : while (have_posts()) : the_post(); global $product;?>
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col-4 d-flex justify-content-end">
+                    <div class="col-lg-4 col-12 d-flex justify-content-end">
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-lg-6 col-1">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                           <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                       foreach ( $terms as $term ) {
                           $product_cat_id = $term->slug;
@@ -31,17 +31,16 @@
                       <div class="car_slider_seperator"></div>
                       <h5>From:</h5>
                       <?php echo $product->get_price_html(); ?>
-                      <button type="button" class="btn btn-primary btn-lg openform" data-href="<?php echo $product->get_name(); ?>">Reserve Now</button>
                       </div>
                       </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12">
 
                         <a href="<?php echo get_permalink() ?>" >
                   <?php the_post_thumbnail('', array('class' => 'd-block img-fluid mx-auto')); ?>
                   </a>
                   </div>
-                  <div class="col-4">
+                  <div class="col-lg-4 col-12 d-none d-md-block">
                     <?php do_action ( 'woocommerce_attribute_doors' );  ?>
                     <?php do_action ( 'woocommerce_attribute_passengers' );  ?>
                     <?php do_action ( 'woocommerce_attribute_luggage' );  ?>
