@@ -15,11 +15,11 @@
   <div class="col-8 customer_center_box">
     <div class="row">
     <div class="col-6 support">
-      <span class="support_name"> JOSEPH HANCOCK </span>
+      <span class="support_name"> Georgios Giannopoulos </span>
       <span class="support_title"> Support Manager </span>
       <div class="support_sep"></div>
-      <span class="support_phone"> Phone:+1-202-555-0153 </span>
-      <span class="support_phone"> Email:joseph@carhub.gr </span>
+      <span class="support_phone"> Phone:+30-6934-500-194 </span>
+      <span class="support_phone"> Email:contact@carhub.gr </span>
 
   </div>
   <div class="col-6 person">

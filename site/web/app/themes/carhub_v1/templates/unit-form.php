@@ -3,6 +3,9 @@
     <div class="row">
       <div class="col-12 text-center feedback">
         <span class="underline_arrow"> Your Booking </span>
+        <div id="feedback">
+          test
+        </div>
         <form class="feedback reservation-form" name="feedback">
           <div class="row">
             <div class="col-12 input-group">
@@ -45,7 +48,7 @@
 <div class="row">
   <div class="col-4 input-group">
     <span class="input-group-addon" id="sizing-addon1">@</span>
-<input type="text" class="form-control" placeholder="Full name" aria-describedby="sizing-addon1">
+<input type="text" class="form-control" name="name" placeholder="Full name" aria-describedby="sizing-addon1">
   </div>
   <div class="col-4 input-group  input-daterange">
     <input type="text" class="form-control" placeholder="Phone" aria-describedby="sizing-addon1">
