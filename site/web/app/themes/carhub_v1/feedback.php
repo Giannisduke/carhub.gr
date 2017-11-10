@@ -6,7 +6,7 @@ $message = strip_tags($_POST['message']);
 $recipient = "giannisduke@gmail.com";
 $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
-mail($recipient, $subject, $name, $message, $mailheader) or die("Error!");
+mail($recipient, $subject, $message, $mailheader) or die("Error!");
 
 echo "<strong>Name</strong>: ".$name."</br>";
 echo "<strong>Email</strong>: ".$email."</br>";
