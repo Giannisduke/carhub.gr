@@ -471,5 +471,3 @@ function wc_custom_redirect_after_purchase() {
    exit;
  }
 }
-
-gravity_form_enqueue_scripts( 1, true );
