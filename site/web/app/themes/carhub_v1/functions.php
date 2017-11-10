@@ -471,3 +471,5 @@ function wc_custom_redirect_after_purchase() {
    exit;
  }
 }
+
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
