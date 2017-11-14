@@ -1,7 +1,5 @@
 <nav id="topNav" class="navbar fixed-top navbar-toggleable-sm ">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-        ☰
-    </button>
+
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
             <li class="nav-item">

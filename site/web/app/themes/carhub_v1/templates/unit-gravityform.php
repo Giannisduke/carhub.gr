@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-12 text-center feedback">
         <span class="underline_arrow"> Your Booking </span>
-<?php gravity_form(1, false, false, false, '', true, 12); ?>
+<?php gravity_form(2, false, false, false, '', true, 12); ?>
 
       <button class="btn btn-primary btn-lg" id="submit">Get Quote!</button>
 
