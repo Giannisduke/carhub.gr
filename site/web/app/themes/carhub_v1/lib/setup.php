@@ -10,11 +10,15 @@ use Roots\Sage\Assets;
 function setup() {
   // Enable features from Soil when plugin is activated
   // https://roots.io/plugins/soil/
+  add_theme_support('soil-js-to-footer');
   add_theme_support('soil-clean-up');
   add_theme_support('soil-nav-walker');
   add_theme_support('soil-nice-search');
-  add_theme_support('soil-jquery-cdn');
+//  add_theme_support('soil-jquery-cdn', 'wp_head');
   add_theme_support('soil-relative-urls');
+  add_theme_support('soil-google-analytics', 'UA-2151567-57', 'wp_head');
+  add_theme_support('soil-relative-urls');
+  add_theme_support('soil-disable-asset-versioning');
 
   // Make theme available for translation
   // Community translations can be found at https://github.com/roots/sage-translations
@@ -102,6 +106,7 @@ function assets() {
   }
 $suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  //wp_enqueue_script('sage/gijgo', Assets\asset_path('scripts/gijgo.js'), ['sage/js'], null, true);
   //wp_enqueue_script('sage/booking-form', Assets\asset_path('scripts/booking-form.js'), ['sage/js'], null, true);
   ///wp_enqueue_script('sage/date-picker', Assets\asset_path('scripts/date-picker.js'), ['sage/js'], null, true);
 

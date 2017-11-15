@@ -70,9 +70,18 @@ body .gform_wrapper .top_label div.ginput_container {
   margin-top: 0px;
 }
 
-.column-count-1-of-4 {
-  width: 45%!important;
+select {
+  border-top-width: 1px;
+  line-height: 2rem;
+border-top-left-radius: 6px;
+  color: $dark;
+  height: 50px;
 }
-.column-count-2-of-4 {
-  width: 2%!important;
+
+select option {
+  padding: 2rem;
+}
+
+.gform_wrapper .gform_footer {
+  text-align: center;
 }

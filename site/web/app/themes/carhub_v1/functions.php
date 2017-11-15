@@ -445,6 +445,10 @@ function woocommerce_loop_item_image_open() {
  			wp_dequeue_style( 'woocommerce_fancybox_styles' );
  			wp_dequeue_style( 'woocommerce_chosen_styles' );
  			wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
+      wp_dequeue_style( 'woocommerce-layout' );
+      wp_dequeue_style( 'woocommerce-smallscreen' );
+      wp_dequeue_style('gforms_css');
+      wp_dequeue_script( 'datepicker' );
  			wp_dequeue_script( 'wc_price_slider' );
  			wp_dequeue_script( 'wc-single-product' );
  			wp_dequeue_script( 'wc-add-to-cart' );
@@ -460,7 +464,8 @@ function woocommerce_loop_item_image_open() {
  			wp_dequeue_script( 'jquery-blockui' );
  			wp_dequeue_script( 'jquery-placeholder' );
  			wp_dequeue_script( 'fancybox' );
- 			wp_dequeue_script( 'jqueryui' );
+ 			//wp_dequeue_script( 'jqueryui' );
+
  		}
  	}
 
@@ -506,3 +511,104 @@ function wc_custom_redirect_after_purchase() {
 }
 
 add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button($button, $form) {
+    ///return '<div class="row">';
+    //return '<div class="co-12">';
+    return '<input type="submit" class="btn btn-primary btn-lg" id="gform_submit_button_' . $form['id'] . '" value="' . $form['button']['text'] . '">';
+  //  return '</div>';
+  //  return '</div>';
+}
+
+if (!is_admin() && current_theme_supports('jquery-cdn')) {
+  wp_deregister_script('jquery');
+
+  wp_register_script('jquery', bower_map_to_cdn([
+    'name' => 'jquery',
+    'cdn' => 'google',
+    'file' => 'jquery.min.js'
+  ], asset_path('scripts/jquery.js')), [], null, true);
+
+  add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
+}
+
+// Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed
+add_filter( 'gform_init_scripts_footer', '__return_true' );
+add_filter( 'gform_cdata_open', 'wrap_gform_cdata_open', 1 );
+function wrap_gform_cdata_open( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = 'document.addEventListener( "DOMContentLoaded", function() { ';
+return $content;
+}
+add_filter( 'gform_cdata_close', 'wrap_gform_cdata_close', 99 );
+function wrap_gform_cdata_close( $content = '' ) {
+if ( ( defined('DOING_AJAX') && DOING_AJAX ) || isset( $_POST['gform_ajax'] ) ) {
+return $content;
+}
+$content = ' }, false );';
+return $content;
+}
+
+/* --------------------------------------------
+Add Bootstrap to Gravity Forms
+-------------------------------------------- */
+
+add_filter("gform_field_content", "bootstrap_styles_for_gravityforms_fields", 10, 5);
+
+function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lead_id, $form_id){
+
+    // Currently only applies to most common field types, but could be expanded.
+
+    if($field["type"] != 'hidden' && $field["type"] != 'list' && $field["type"] != 'multiselect' && $field["type"] != 'checkbox' && $field["type"] != 'fileupload' && $field["type"] != 'date' && $field["type"] != 'html' && $field["type"] != 'address') {
+        $content = str_replace('class=\'medium', 'class=\'form-control medium', $content);
+    }
+
+    if($field["type"] == 'name' || $field["type"] == 'address') {
+        $content = str_replace('<input ', '<input class=\'form-control\' ', $content);
+    }
+
+    if($field["type"] == 'textarea') {
+        $content = str_replace('class=\'textarea', 'class=\'form-control textarea', $content);
+    }
+
+    if($field["type"] == 'checkbox') {
+        $content = str_replace('li class=\'', 'li class=\'checkbox ', $content);
+        $content = str_replace('<input ', '<input style=\'margin-left:1px;\' ', $content);
+    }
+
+    if($field["type"] == 'radio') {
+        $content = str_replace('li class=\'', 'li class=\'radio ', $content);
+        $content = str_replace('<input ', '<input style=\'margin-left:1px;\' ', $content);
+    }
+
+    return $content;
+
+} // End bootstrap_styles_for_gravityforms_fields()
+
+
+add_action('admin_enqueue_scripts', 'unload_all_jquery');
+function unload_all_jquery() {
+    //wp_enqueue_script("jquery");
+    $jquery_ui = array(
+        "jquery-ui-widget",
+        "jquery-ui-mouse",
+        "jquery-ui-accordion",
+        "jquery-ui-autocomplete",
+        "jquery-ui-slider",
+        "jquery-ui-tabs",
+        "jquery-ui-draggable",
+        "jquery-ui-droppable",
+        "jquery-ui-selectable",
+        "jquery-ui-position",
+        "jquery-ui-datepicker",
+        "jquery-ui-resizable",
+        "jquery-ui-dialog",
+        "jquery-ui-button"
+    );
+
+    foreach($jquery_ui as $script){
+        wp_deregister_script($script);
+    }
+}

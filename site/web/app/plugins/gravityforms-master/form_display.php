@@ -943,7 +943,7 @@ class GFFormDisplay {
 			}
 
 			$form_string .= "
-                        <div class='gform_body'>";
+                        <div class='gform_body container'>";
 
 			//add first page if this form has any page fields
 			if ( $has_pages ) {
@@ -958,7 +958,7 @@ class GFFormDisplay {
 			$sublabel_class = rgar( $form, 'subLabelPlacement' ) == 'above' ? 'form_sublabel_above' : 'form_sublabel_below';
 
 
-			$form_string .= "<ul id='gform_fields_{$form_id}' class='" . GFCommon::get_ul_classes( $form ) . "'>";
+			$form_string .= "<div id='gform_fields_{$form_id}' class='row " . GFCommon::get_ul_classes( $form ) . "'>";
 
 			if ( is_array( $form['fields'] ) ) {
 				foreach ( $form['fields'] as $field ) {
@@ -975,7 +975,7 @@ class GFFormDisplay {
 				}
 			}
 			$form_string .= '
-                            </ul>';
+                            </div>';
 
 			if ( $has_pages ) {
 				$previous_button_alt = rgempty( 'imageAlt', $form['lastPageButton'] ) ? __( 'Previous Page', 'gravityforms' ) : $form['lastPageButton']['imageAlt'];
@@ -2820,7 +2820,7 @@ class GFFormDisplay {
 
 				$style        = self::is_page_active( $form['id'], $field->pageNumber ) ? '' : "style='display:none;'";
 				$custom_class = ! empty( $custom_class ) ? " {$custom_class}" : '';
-				$html         = "</ul>
+				$html         = "</div>
                     </div>
                     <div class='gform_page_footer'>
                         {$previous_button} {$next_button} {$save_button}
@@ -2828,7 +2828,7 @@ class GFFormDisplay {
                 </div>
                 <div id='gform_page_{$form['id']}_{$field->pageNumber}' class='gform_page{$custom_class}' {$style}>
                     <div class='gform_page_fields'>
-                        <ul id='gform_fields_{$form['id']}_{$field->pageNumber}' class='" . GFCommon::get_ul_classes( $form ) . "'>";
+                        <div id='gform_fields_{$form['id']}_{$field->pageNumber}' class='" . GFCommon::get_ul_classes( $form ) . "'>";
 
 				return $html;
 			}
@@ -2896,7 +2896,7 @@ class GFFormDisplay {
 
 		$css_class = esc_attr( $css_class );
 
-		$field_container = "<li id='$field_id' class='{$css_class}' $style>{FIELD_CONTENT}</li>";
+		$field_container = "<div id='$field_id' class='{$css_class}' $style>{FIELD_CONTENT}</div>";
 
 		$field_container = gf_apply_filters( array( 'gform_field_container', $form['id'], $field->id ), $field_container, $field, $form, $css_class, $style, $field_content );
 

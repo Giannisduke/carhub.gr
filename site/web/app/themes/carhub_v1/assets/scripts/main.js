@@ -31,20 +31,6 @@
 
         });
 
-
-
-        $('.input-daterange').datepicker({
-            format: "MM dd, yyyy",
-            autoclose: true,
-            todayHighlight: true,
-            startDate: "today"
-        });
-
-$('#timepicker1').timepicker({
-  template: 'dropdown'
-});
-$('#timepicker2').timepicker();
-
 var $openform = $('.openform');
 $openform.click(function(){
 var $this = $(this);
@@ -55,20 +41,6 @@ $(this).addClass( "selected" );
 $('.choosen_car').html(post_name);
 });
 
-$("button#submit").click(function(){
-$.ajax({
-type: "POST",
-url: "https://carhub.gr/app/themes/carhub_v1/feedback.php",
-data: $('form.feedback').serialize(),
-success: function(message){
-$("#feedback").html(message);
-
-},
-error: function(){
-alert("Error");
-}
-});
-});
 
       },
       finalize: function() {
@@ -79,6 +51,7 @@ alert("Error");
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
         $(".openform").click(function(){
           //TweenMax.fromTo( $(".paralsec"), 1.2, {css: {backgroundSize: "100% 80%"}}, {css:{backgroundSize: "100% 41%" }, ease: Elastic.easeOut.config(1, 0.3) }) ;
         //  TweenMax.fromTo( $(".forma"), 1.2, {css: {display: "none"}}, {css:{display: "block" }, ease: Elastic.easeOut.config(1, 0.3) }) ;
