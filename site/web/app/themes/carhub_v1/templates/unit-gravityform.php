@@ -5,7 +5,7 @@
         <span class="underline_arrow"> Your Booking </span>
 <?php gravity_form(2, false, false, false, '', true, 12); ?>
 
-      <button class="btn btn-primary btn-lg" id="submit">Get Quote!</button>
+    
 
       </div>
     </div>

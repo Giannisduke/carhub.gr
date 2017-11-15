@@ -51,16 +51,7 @@ text-align: center;
 line-height: 60px;
 }
 
-@media (max-width: 575px) {
-  .paral h2 {
-  color: $brand-red;
-  font-family: 'Dual-300', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  text-align: center;
-  line-height: 60px;
-  }
-}
+
 /* Image for Parallax Section */
 .paralsec {
 background: url(../images/hero_01.jpg) no-repeat;

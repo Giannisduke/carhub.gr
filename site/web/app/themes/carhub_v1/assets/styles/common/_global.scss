@@ -1,3 +1,26 @@
 .test {
   border: 1px solid red;
 }
+
+
+@media (max-width: 575px) {
+  .paral h2 {
+  color: $brand-red;
+  font-family: 'Dual-300', sans-serif;
+  font-size: 1rem!important;
+  letter-spacing: 3px;
+  text-align: center;
+  line-height: 60px;
+},
+
+  .navbar {
+    padding: 1.5rem 0rem!important;
+    transition: padding .5s;
+  },
+
+  /* Remove Bottom Margin from Jumbotron */
+.jumbotron{
+  margin: -120px 0 0 0;
+  padding: 120px 0 0!important;
+}
+}
