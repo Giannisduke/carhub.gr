@@ -19,33 +19,37 @@
                     <div class="col-lg-3 col-12">
 
 
-                        <div class="row h-50">
-                          <div class="col-12 col-lg-8">
-                          </div>
-                          <div class="col-12 col-lg-4">
-                          <div class="col-12 ">
-                          <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
-                      foreach ( $terms as $term ) {
-                          $product_cat_id = $term->slug;
-                          echo $product_cat_id;
-                          break;
-                      } ?> </h6>
-                    </div>
-                    <div class="col-12">
-                      <h3><?php echo $product->get_name(); ?></h3>
-                    </div>
-                    <div class="col-12">
-                      <div class="car_slider_seperator"></div>
-                    </div>
-                    <div class="col-2 col-lg-12">
-                      <h5>From:</h5>
-                    </div>
-                    <div class="col-10 col-lg-12">
-                      <?php echo $product->get_price_html(); ?>
-                    </div>
-
+                      <div class="row h-50">
+                        <div class="col-12 col-lg-6">
                         </div>
-                          </div>
+                        <div class="col-12 col-lg-6">
+                          <div class="row">
+                        <div class="col-12 ">
+                        <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
+                    foreach ( $terms as $term ) {
+                        $product_cat_id = $term->slug;
+                        echo $product_cat_id;
+                        break;
+                    } ?> </h6>
+                  </div>
+                  <div class="col-12">
+                    <h3><?php echo $product->get_name(); ?></h3>
+                  </div>
+                  <div class="col-12">
+                    <div class="car_slider_seperator"></div>
+                  </div>
+                  <div class="col-1 col-lg-12">
+                    <h5>From:</h5>
+                  </div>
+                  <div class="col-4 col-lg-12">
+                    <?php echo $product->get_price_html(); ?>
+                  </div>
+                  <div class="col-6 col-lg-12">
+                    <button type="button" class="btn btn-primary btn-lg btn-block openform">Book Now!</button>
+                  </div>
+                    </div>
+                      </div>
+                        </div>
                     </div>
                     <div class="col-lg-6 col-12">
 
@@ -54,7 +58,7 @@
                   </a>
                   </div>
                   <div class="col-lg-3 col-12">
-                    <div class="row">
+                    <div class="row attribute_row">
                     <div class="col-6 col-lg-12">
                     <?php do_action ( 'woocommerce_attribute_doors' );  ?>
                   </div>
@@ -88,9 +92,10 @@
 
 
                               <div class="row h-50">
-                                <div class="col-12 col-lg-8">
+                                <div class="col-12 col-lg-6">
                                 </div>
-                                <div class="col-12 col-lg-4">
+                                <div class="col-12 col-lg-6">
+                                  <div class="row">
                                 <div class="col-12 ">
                                 <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                             foreach ( $terms as $term ) {
@@ -105,13 +110,16 @@
                           <div class="col-12">
                             <div class="car_slider_seperator"></div>
                           </div>
-                          <div class="col-2 col-lg-12">
+                          <div class="col-1 col-lg-12">
                             <h5>From:</h5>
                           </div>
-                          <div class="col-10 col-lg-12">
+                          <div class="col-4 col-lg-12">
                             <?php echo $product->get_price_html(); ?>
                           </div>
-
+                          <div class="col-6 col-lg-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block openform">Book Now!</button>
+                          </div>
+                            </div>
                               </div>
                                 </div>
                           </div>
@@ -122,7 +130,7 @@
                         </a>
                         </div>
                         <div class="col-lg-3 col-12">
-                          <div class="row">
+                          <div class="row attribute_row">
                           <div class="col-6 col-lg-12">
                           <?php do_action ( 'woocommerce_attribute_doors' );  ?>
                         </div>

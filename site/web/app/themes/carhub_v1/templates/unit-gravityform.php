@@ -3,9 +3,9 @@
     <div class="row">
       <div class="col-12 text-center feedback">
         <span class="underline_arrow"> Your Booking </span>
-<?php gravity_form(2, false, false, false, '', true, 12); ?>
+<?php gravity_form('Get Quote', false, false, false, '', true, 12); ?>
 
-    
+
 
       </div>
     </div>
