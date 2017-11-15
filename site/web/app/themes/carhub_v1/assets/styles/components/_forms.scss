@@ -86,6 +86,10 @@ select option {
   padding: 2rem;
 }
 
+select.medium {
+  width: calc(100% - 0px);
+}
+
 .gform_wrapper .gform_footer {
   text-align: center;
 }
