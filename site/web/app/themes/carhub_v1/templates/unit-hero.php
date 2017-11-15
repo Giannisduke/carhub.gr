@@ -20,9 +20,9 @@
 
 
                         <div class="row h-50">
-                          <div class="col-12 col-lg-6 ">
+                          <div class="col-12 col-lg-8">
                           </div>
-                          <div class="col-12 col-lg-6">
+                          <div class="col-12 col-lg-4">
                           <div class="col-12 ">
                           <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                       foreach ( $terms as $term ) {
@@ -88,9 +88,9 @@
 
 
                               <div class="row h-50">
-                                <div class="col-12 col-lg-6 ">
+                                <div class="col-12 col-lg-8">
                                 </div>
-                                <div class="col-12 col-lg-6">
+                                <div class="col-12 col-lg-4">
                                 <div class="col-12 ">
                                 <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                             foreach ( $terms as $term ) {

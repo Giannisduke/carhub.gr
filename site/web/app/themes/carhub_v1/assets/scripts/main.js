@@ -51,6 +51,7 @@ $('.choosen_car').html(post_name);
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        
 
         $(".openform").click(function(){
           //TweenMax.fromTo( $(".paralsec"), 1.2, {css: {backgroundSize: "100% 80%"}}, {css:{backgroundSize: "100% 41%" }, ease: Elastic.easeOut.config(1, 0.3) }) ;

@@ -75,7 +75,11 @@ select {
   line-height: 2rem;
 border-top-left-radius: 6px;
   color: $dark;
-  height: 50px;
+  min-height: 50px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(4.25rem + 2px);
 }
 
 select option {
@@ -88,4 +92,17 @@ select option {
 
 .large {
   width: 100%;
+
+}
+
+.gform_fields input {
+    min-height: 50px;
+}
+
+.gfield_label {
+  display: none;
+}
+
+.gfield {
+  padding: .8rem .4rem;
 }
