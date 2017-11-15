@@ -445,10 +445,10 @@ function woocommerce_loop_item_image_open() {
  			wp_dequeue_style( 'woocommerce_fancybox_styles' );
  			wp_dequeue_style( 'woocommerce_chosen_styles' );
  			wp_dequeue_style( 'woocommerce_prettyPhoto_css' );
-      wp_dequeue_style( 'woocommerce-layout' );
-      wp_dequeue_style( 'woocommerce-smallscreen' );
-      wp_dequeue_style('gforms_css');
-      wp_dequeue_script( 'datepicker' );
+    //  wp_dequeue_style( 'woocommerce-layout' );
+    //  wp_dequeue_style( 'woocommerce-smallscreen' );
+      //wp_dequeue_style('gforms_css');
+      //wp_dequeue_script( 'datepicker' );
  			wp_dequeue_script( 'wc_price_slider' );
  			wp_dequeue_script( 'wc-single-product' );
  			wp_dequeue_script( 'wc-add-to-cart' );
@@ -520,17 +520,7 @@ function form_submit_button($button, $form) {
   //  return '</div>';
 }
 
-if (!is_admin() && current_theme_supports('jquery-cdn')) {
-  wp_deregister_script('jquery');
 
-  wp_register_script('jquery', bower_map_to_cdn([
-    'name' => 'jquery',
-    'cdn' => 'google',
-    'file' => 'jquery.min.js'
-  ], asset_path('scripts/jquery.js')), [], null, true);
-
-  add_filter('script_loader_src', __NAMESPACE__ . '\\jquery_local_fallback', 10, 2);
-}
 
 // Force Gravity Forms to init scripts in the footer and ensure that the DOM is loaded before scripts are executed
 add_filter( 'gform_init_scripts_footer', '__return_true' );

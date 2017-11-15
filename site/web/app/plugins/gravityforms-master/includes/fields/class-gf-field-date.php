@@ -295,7 +295,7 @@ class GF_Field_Date extends GF_Field {
 
 							$tabindex = $this->get_tabindex();
 
-							$field_str .= "<div class='gfield_date_dropdown_day ginput_container ginput_container_date' id='{$field_id}_2_container'>" . $this->get_day_dropdown( "input_{$id}[]", "{$field_id}_2", rgar( $date_info, 'day' ), $tabindex, $disabled_text, $day_placeholder_value ) . '</div></div>';
+								$field_str .= "<div class='gfield_date_dropdown_day ginput_container ginput_container_date' id='{$field_id}_2_container'>" . $this->get_day_dropdown( "input_{$id}[]", "{$field_id}_2", rgar( $date_info, 'day' ), $tabindex, $disabled_text, $day_placeholder_value ) . '</div></div>';
 						} else {
 
 							$field_str = $is_sub_label_above
@@ -405,7 +405,7 @@ class GF_Field_Date extends GF_Field {
 				$class        = esc_attr( $class );
 
 				return "<div class='ginput_container ginput_container_date'>
-                            <input name='input_{$id}' id='{$field_id}' type='text' value='{$picker_value}' class='datepicker {$class} {$format} {$icon_class}' {$tabindex} {$disabled_text} {$date_picker_placeholder}/>
+                            <input name='input_{$id}' id='{$field_id}' type='text' value='{$picker_value}' class='datepicker large {$format} {$icon_class}' {$tabindex} {$disabled_text} {$date_picker_placeholder}/>
                         </div>
                         <input type='hidden' id='gforms_calendar_icon_$field_id' class='gform_hidden' value='$icon_url'/>";
 			}
