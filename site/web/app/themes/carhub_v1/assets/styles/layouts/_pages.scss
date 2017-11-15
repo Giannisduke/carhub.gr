@@ -4,7 +4,7 @@
 }
 
 .navbar {
-  padding: 3.5rem 0rem;
+  padding: 2.5rem 0rem;
   transition: padding .5s;
 }
 
@@ -12,8 +12,16 @@
   background: $dark;
   padding: .5rem 0rem;
   transition: padding .5s;
+  opacity: .85;
 }
 
+.carousel-control-prev {
+  top: 55%;
+}
+
+.carousel-control-next {
+  top: 55%;
+}
 
 .jumbotron {
   padding: 0px;
@@ -69,7 +77,7 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
 /* Remove Bottom Margin from Jumbotron */
 .jumbotron{
   margin: -120px 0 0 0;
-  padding: 180px 0 0;
+  padding: 160px 0 0;
 }
 
 /* Add more images for more sections */
@@ -77,7 +85,16 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   background: url(../images/hero_01.jpg) 10px 10px no-repeat !important;
 
 }
-
+.navbar-brand h1 {
+  color: $brand-red;
+  font-family: 'HelveticaNeue-Light', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  // padding: 0rem 0rem 0 4rem;
+  line-height: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
 .jumbotron h3 {
   color: #FFF;
   font-family: 'HelveticaNeue-Bold', sans-serif;
@@ -286,4 +303,8 @@ background-color: $brand-red;
   font-size: 1rem;
   letter-spacing:0.03rem;
   line-height: 1rem;
+}
+
+.slider-image {
+  padding-top: 2rem;
 }

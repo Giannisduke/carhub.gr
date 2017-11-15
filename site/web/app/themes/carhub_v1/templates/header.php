@@ -2,8 +2,10 @@
 
     <a class="navbar-brand mx-auto" href="#">
       <img class="logo" src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'>
-      <?php wp_title(''); ?>
+      <h1><?php echo get_bloginfo( 'name' ); ?></h1>
     </a>
+
+
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">

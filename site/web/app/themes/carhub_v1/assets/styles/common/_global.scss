@@ -21,6 +21,23 @@
   /* Remove Bottom Margin from Jumbotron */
 .jumbotron{
   margin: -120px 0 0 0;
-  padding: 120px 0 0!important;
+  padding: 140px 0 0!important;
+},
+
+.paralsec {
+  background-size: 100% 68%!important;
+},
+.jumbotron h5 {
+  color: $dark!important;
+},
+.cars-slider_item-option h5 {
+  font-size: .8rem!important;
+},
+.carousel-control-prev {
+  top: 34%!important;
+},
+
+.carousel-control-next {
+  top: 34%!important;
 }
 }
