@@ -586,29 +586,3 @@ function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lea
     return $content;
 
 } // End bootstrap_styles_for_gravityforms_fields()
-
-
-add_action('admin_enqueue_scripts', 'unload_all_jquery');
-function unload_all_jquery() {
-    //wp_enqueue_script("jquery");
-    $jquery_ui = array(
-        "jquery-ui-widget",
-        "jquery-ui-mouse",
-        "jquery-ui-accordion",
-        "jquery-ui-autocomplete",
-        "jquery-ui-slider",
-        "jquery-ui-tabs",
-        "jquery-ui-draggable",
-        "jquery-ui-droppable",
-        "jquery-ui-selectable",
-        "jquery-ui-position",
-        "jquery-ui-datepicker",
-        "jquery-ui-resizable",
-        "jquery-ui-dialog",
-        "jquery-ui-button"
-    );
-
-    foreach($jquery_ui as $script){
-        wp_deregister_script($script);
-    }
-}
