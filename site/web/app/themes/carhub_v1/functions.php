@@ -71,7 +71,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'doors';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>Doors:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>Doors:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_doors', 'show_attributes_doors' );
 
@@ -81,7 +81,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'passengers';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>passengers:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>passengers:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_passengers', 'show_attributes_passengers' );
 
@@ -91,7 +91,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'luggage';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>luggage:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>luggage:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_luggage', 'show_attributes_luggage' );
 
@@ -101,7 +101,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'transmission';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>transmission:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>transmission:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_tansmission', 'show_attributes_transmission' );
 
@@ -111,7 +111,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'air-conditioning';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>air condtitoning:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>air condtitoning:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_air_conditioning', 'show_attributes_air_conditioning' );
 
@@ -121,7 +121,7 @@ $product_id = $product->get_id();
 $attribute_slug = 'drive-wheel';
 $array = wc_get_product_terms( $product_id , 'pa_' . $attribute_slug, array( 'fields' => 'names' ) );
 $text = array_shift( $array );
-echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>Drive wheel:<span class="attribute">' . $text . '</span></h5></div>';
+echo '<div class="cars-slider_item-option car-option-' . $attribute_slug . '"><h6>Drive wheel:<span class="attribute">' . $text . '</span></h6></div>';
 }
 add_action( 'woocommerce_attribute_drive_wheel', 'show_attributes_drive_wheel' );
 

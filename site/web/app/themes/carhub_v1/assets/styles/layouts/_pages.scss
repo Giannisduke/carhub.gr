@@ -4,13 +4,13 @@
 }
 
 .navbar {
-  padding: 2.5rem 0rem;
+  padding: 1.5rem 0rem;
   transition: padding .5s;
 }
 
 .scrolled-nav {
   background: $dark;
-  padding: .5rem 0rem;
+  padding: 1.5rem 0;
   transition: padding .5s;
   opacity: .85;
 }
@@ -51,12 +51,60 @@ text-align: center;
 line-height: 50px;
 }
 .paral h2 {
-color: $brand-red;
+color: $white;
 font-family: 'Dual-300', sans-serif;
-font-size: 1.5rem;
+font-size: 3.7rem;
 letter-spacing: 3px;
 text-align: center;
-line-height: 60px;
+line-height: 2.5rem;
+}
+.paral h3 {
+color: $brand-red;
+font-family: 'HelveticaNeue-Light', sans-serif;
+font-size: 1rem;
+letter-spacing: 3px;
+text-align: center;
+line-height: 30px;
+text-transform: uppercase;
+}
+
+.paral h4 {
+  color: $white;
+font-family: 'HelveticaNeue-Thin', sans-serif;
+font-size: 1.15rem;
+letter-spacing: .15rem;
+text-transform: uppercase;
+}
+
+.paral h5 {
+  color: $white;
+  font-family: 'HelveticaNeue-CondensedBlack', sans-serif;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.paral h6 {
+  color: $white;
+  font-family: 'HelveticaNeue-Light', sans-serif;
+  font-size: .9rem;
+  letter-spacing: .15rem;
+   padding: .75rem 0 0 3.5rem;
+  text-transform: uppercase;
+
+}
+
+
+
+.carousel h3 {
+  color: $white;
+  font-family: 'HelveticaNeue-CondensedBlack', sans-serif;
+
+  text-align: left;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 
@@ -85,7 +133,7 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   background: url(../images/hero_01.jpg) 10px 10px no-repeat !important;
 
 }
-.navbar-brand h1 {
+.navbar h1 {
   color: $brand-red;
   font-family: 'HelveticaNeue-Light', sans-serif;
   font-size: 1rem;
@@ -95,33 +143,8 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   text-align: center;
   text-transform: uppercase;
 }
-.jumbotron h3 {
-  color: #FFF;
-  font-family: 'HelveticaNeue-Bold', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  // padding: 0rem 0rem 0 4rem;
-  text-transform: uppercase;
-}
 
-.jumbotron h5 {
-  color: #FFF;
-  font-family: 'HelveticaNeue-UltraLight', sans-serif;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-//  padding: 0rem 0rem 0 4rem;
-  text-transform: uppercase;
-  margin-bottom: 0rem;
-}
 
-.jumbotron h6 {
-  color: #FFF;
-  font-family: 'HelveticaNeue-Light', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  // padding: 0rem 0rem 0 4rem;
-  text-transform: uppercase;
-}
 
 .car_slider {
   padding: 5rem 0 3rem 0;
@@ -144,10 +167,7 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   min-height: 38px;
   margin: .5rem 0 0;
 }
-.cars-slider_item-option h6 {
-  padding: .7rem 0 0 3rem;
-  font-size: 1rem;
-}
+
 .car-option-doors {
   background: url(../images/attributes_doors.svg) 0px 0px no-repeat !important;
 }
@@ -172,10 +192,6 @@ background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
   color: $brand-red;
   font-family: 'HelveticaNeue-Bold', sans-serif;
 }
-.carousel-item h3 {
-  font-size: 3rem;
-}
-
 .car_slider_seperator {
   width: 85px;
   height: 12px;

@@ -1,11 +1,13 @@
 <section id="home">
   <!-- First Parallax Section -->
   <div class="jumbotron paral paralsec">
-    <h1><?php printf( esc_html__( '%s', 'sage' ), get_bloginfo ( 'description' ) ); ?></h1>
+    <h2><?php printf( esc_html__( '%s', 'sage' ), get_bloginfo ( 'description' ) ); ?></h2>
     <?
     $intro = get_page_by_path('intro');
   $content = $intro->post_content;
-  echo $content
+  echo '<h3>';
+  echo $content;
+  echo '</h3>';
   ?>
   <div class="container-fluid">
     <div class="row">
@@ -25,23 +27,23 @@
                         <div class="col-12 col-lg-6">
                           <div class="row">
                         <div class="col-12 ">
-                        <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
+                        <h4> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                     foreach ( $terms as $term ) {
                         $product_cat_id = $term->slug;
                         echo $product_cat_id;
                         break;
-                    } ?> </h6>
+                    } ?> </h4>
                   </div>
                   <div class="col-12">
-                    <h3><?php echo $product->get_name(); ?></h3>
+                    <h5><?php echo $product->get_name(); ?></h5>
                   </div>
                   <div class="col-12">
                     <div class="car_slider_seperator"></div>
                   </div>
 
                   <div class="col-6 col-lg-12">
-                    <h5>From:</h5>
-                    <?php echo $product->get_price_html(); ?>
+                    <h4>From:</h4>
+                  <h5><?php echo $product->get_price_html(); ?></h5>
                   </div>
                   <div class="col-6 col-lg-12">
                     <button type="button" class="btn btn-primary btn-lg btn-block openform" data-car-choise="<?php echo $product->get_name(); ?>">Book Now!</button>
@@ -96,23 +98,23 @@
                                 <div class="col-12 col-lg-6">
                                   <div class="row">
                                 <div class="col-12 ">
-                                <h6> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
+                                <h4> <?php  $terms = get_the_terms( $post->ID, 'product_cat' );
                             foreach ( $terms as $term ) {
                                 $product_cat_id = $term->slug;
                                 echo $product_cat_id;
                                 break;
-                            } ?> </h6>
+                            } ?> </h4>
                           </div>
                           <div class="col-12">
-                            <h3><?php echo $product->get_name(); ?></h3>
+                            <h5><?php echo $product->get_name(); ?></h5>
                           </div>
                           <div class="col-12">
                             <div class="car_slider_seperator"></div>
                           </div>
 
                           <div class="col-6 col-lg-12">
-                              <h5>From:</h5>
-                            <?php echo $product->get_price_html(); ?>
+                              <h4>From:</h4>
+                              <h5><?php echo $product->get_price_html(); ?></h5>
                           </div>
                           <div class="col-6 col-lg-12">
                             <button type="button" class="btn btn-primary btn-lg btn-block openform" data-car-choise="<?php echo $product->get_name(); ?>">Book Now!</button>

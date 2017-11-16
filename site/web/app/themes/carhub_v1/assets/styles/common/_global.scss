@@ -9,10 +9,10 @@
   width: 50%;
   height: auto;
 }
-.navbar-brand h1 {
-  color: #f10009;
-font-family: HelveticaNeue-Light,sans-serif;
-font-size: .6rem!important;
+.navbar h1 {
+  color: $brand-red;
+font-family: 'HelveticaNeue-Light',sans-serif;
+font-size: .8rem!important;
 letter-spacing: 2px;
 line-height: 1rem!important;
 text-align: center;
@@ -27,17 +27,20 @@ text-transform: uppercase;
 
 
   .paral h2 {
-  color: $brand-red;
-  font-family: 'Dual-300', sans-serif;
-  font-size: .65rem!important;
+
+  font-size: 3rem!important;
   letter-spacing: .16rem!important;
-  text-align: center;
   line-height: 2rem!important;
 },
-.carousel-item h3 {
-  font-size: 2rem!important;
+.paral h3 {
+  color: $brand-red;
+    font-family: 'HelveticaNeue-Light',sans-serif;
+    font-size: .75rem!important;
+    letter-spacing: .15rem;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
 },
-
   .navbar {
     padding: .5rem 0rem!important;
     transition: padding .5s;
@@ -54,9 +57,7 @@ text-transform: uppercase;
 .paralsec {
   background-size: 100% 63% !important;
 },
-.jumbotron h5 {
-  font-size: .7rem !important
-},
+
 .underline_arrow {
   font-size: 1.6rem!important;
   background-size: 20%!important;
