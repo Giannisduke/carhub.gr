@@ -20,11 +20,11 @@ form .row {
 }
 
 .forma {
-  padding: 2rem;
+  padding: .5rem 0 0 0;
 }
 
 .forma form {
-  padding: 0 0 2rem 0;
+  padding: 2rem 0 2rem 0;
 }
 .input-group-addon{
   border-radius: 0rem;
@@ -98,9 +98,9 @@ select option {
 }
 
 .gform_fields input {
-  background: $bg-grey;
+  background: $white;
   height: 52px;
-  border: 1px solid #fff;
+  border: 1px solid $bg-grey-form;
 border-radius: 4px;
 
 }
@@ -138,15 +138,10 @@ border-radius: 4px
 }
 
 .input-group-addon {
-  border: 1px solid rgba(255, 255, 255, 1);
-  background-color: $bg-grey;
+  border: 1px solid $bg-grey-form;
 }
 
 input-group-addon:not(:last-child) {
   border-right: 1px solid #fff;
 //  border-left: 0px solid #fff;
-}
-
-.select2-container {
-  width: 100%;
 }

@@ -66,10 +66,9 @@ class GF_Field_Text extends GF_Field {
 		$placeholder_attribute = $this->get_field_placeholder_attribute();
 		$required_attribute    = $this->isRequired ? 'aria-required="true"' : '';
 		$invalid_attribute     = $this->failed_validation ? 'aria-invalid="true"' : 'aria-invalid="false"';
-		$fields = array();
-		//$label								= $field->label;
+		
 
-		$input = "<span class='input-group-addon' id='basic-addon1'>{$id}</span>
+		$input = "<span class='input-group-addon label-{$id}' id='basic-addon1'><img src='http://carhub.gr/app/themes/carhub_v1/dist/images/form_location.svg' ></span>
 <input name='input_{$id}' id='{$field_id}' type='{$html_input_type}' value='{$value}' class='form-control {$class}' {$max_length} {$tabindex} {$logic_event} {$placeholder_attribute} {$required_attribute} {$invalid_attribute} {$disabled_text}/>";
 
 		return sprintf( "<div class='ginput_container ginput_container_text'><div class='input-group'>%s</div></div>", $input );

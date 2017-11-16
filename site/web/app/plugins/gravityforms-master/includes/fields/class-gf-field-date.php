@@ -406,7 +406,7 @@ class GF_Field_Date extends GF_Field {
 
 				return "<div class='ginput_container ginput_container_date'>
 				<div class='input-group'>
-				<span class='input-group-addon' id='basic-addon1'>{$id}</span>
+				<span class='input-group-addon label-{$id}' id='basic-addon1'>{$id}</span>
                             <input name='input_{$id}' id='{$field_id}' type='text' value='{$picker_value}' class='form-control datepicker large {$format} {$icon_class}' {$tabindex} {$disabled_text} {$date_picker_placeholder}/>
                         </div></div>
                         <input type='hidden' id='gforms_calendar_icon_$field_id' class='gform_hidden' value='$icon_url'/>";
