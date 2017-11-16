@@ -41,7 +41,10 @@ TweenLite.to(window, 1, {scrollTo:{y:".feedback", offsetY:160}});
 $('selected').html(post_name);
 });
 
-
+$('.dropdown-item').click(function(){
+$('.chosen').html($(this).text() + '<span class="caret"></span>');
+});
+  $('.js-example-basic-single').select2();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

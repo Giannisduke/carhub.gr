@@ -339,6 +339,7 @@ class GF_Field_List extends GF_Field {
 					}
 					$is_selected = empty( $value ) ? $choice_selected : $choice_value == $value;
 					$selected    = $is_selected ? "selected='selected'" : '';
+					//$bootstrapselect    = $is_selected ? "class='selectpicker'" : '';
 					$input .= "<option value='" . esc_attr( $choice_value ) . "' {$selected}>" . esc_html( $choice_text ) . '</option>';
 				}
 				$input .= '</select>';
@@ -467,7 +468,7 @@ class GF_Field_List extends GF_Field {
 		}
 
 		$value = maybe_unserialize( $value );
-		
+
 		if( ! is_array( $value ) || ! isset( $value[0] ) ) {
 			return '';
 		}

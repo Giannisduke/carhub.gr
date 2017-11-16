@@ -56,7 +56,7 @@ class GF_Field_Select extends GF_Field {
 		$required_attribute = $this->isRequired ? 'aria-required="true"' : '';
 		$invalid_attribute  = $this->failed_validation ? 'aria-invalid="true"' : 'aria-invalid="false"';
 
-		return sprintf( "<div class='ginput_container ginput_container_select'><select name='input_%d' id='%s' $logic_event class='%s' $tabindex %s %s %s>%s</select></div>", $id, $field_id, $css_class, $disabled_text, $required_attribute, $invalid_attribute, $this->get_choices( $value ) );
+		return sprintf( "<div class='ginput_container ginput_container_select'><select name='input_%d' id='%s' $logic_event class='js-example-basic-single %s' $tabindex %s %s %s>%s</select></div>", $id, $field_id, $css_class, $disabled_text, $required_attribute, $invalid_attribute, $this->get_choices( $value ) );
 	}
 
 	public function get_choices( $value ) {
