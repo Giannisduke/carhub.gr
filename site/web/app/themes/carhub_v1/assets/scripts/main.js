@@ -34,11 +34,11 @@
 var $openform = $('.openform');
 $openform.click(function(){
 var $this = $(this);
-var post_name = $this.attr('data-href');
+var post_name = $this.attr('data-car-choise');
 TweenLite.to(window, 1, {scrollTo:{y:".feedback", offsetY:160}});
-$(this).addClass( "selected" );
 
-$('.choosen_car').html(post_name);
+
+$('selected').html(post_name);
 });
 
 
