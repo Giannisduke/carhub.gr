@@ -510,7 +510,7 @@ function wc_custom_redirect_after_purchase() {
  }
 }
 
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+//add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button($button, $form) {
     ///return '<div class="row">';
@@ -610,3 +610,5 @@ function populate_posts( $form ) {
 
     return $form;
 }
+
+add_filter("gform_confirmation_anchor_2", create_function("","return false;"));

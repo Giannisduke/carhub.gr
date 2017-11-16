@@ -4,31 +4,62 @@
 
 
 @media (max-width: 575px) {
+
+.logo {
+  width: 50%;
+  height: auto;
+}
+.navbar-brand h1 {
+  color: #f10009;
+font-family: HelveticaNeue-Light,sans-serif;
+font-size: .6rem!important;
+letter-spacing: 2px;
+line-height: 1rem!important;
+text-align: center;
+text-transform: uppercase;
+}
+  .paral h1 {
+      color: #fff;
+      font-size: 2rem!important;
+      letter-spacing: 3px!important;
+      line-height: 25px!important;
+  },
+
+
   .paral h2 {
   color: $brand-red;
   font-family: 'Dual-300', sans-serif;
-  font-size: 1rem!important;
-  letter-spacing: 3px;
+  font-size: .65rem!important;
+  letter-spacing: .16rem!important;
   text-align: center;
-  line-height: 60px;
+  line-height: 2rem!important;
+},
+.carousel-item h3 {
+  font-size: 2rem!important;
 },
 
   .navbar {
-    padding: 1.5rem 0rem!important;
+    padding: .5rem 0rem!important;
     transition: padding .5s;
   },
-
+.forma {
+  padding: 0rem!important;
+},
   /* Remove Bottom Margin from Jumbotron */
 .jumbotron{
-  margin: -120px 0 0 0;
+  margin: -180px 0 0 0!important;
   padding: 140px 0 0!important;
 },
 
 .paralsec {
-  background-size: 100% 68%!important;
+  background-size: 100% 63% !important;
 },
 .jumbotron h5 {
   font-size: .7rem !important
+},
+.underline_arrow {
+  font-size: 1.6rem!important;
+  background-size: 20%!important;
 },
 .cars-slider_item-option h6 {
   font-size: .8rem!important;

@@ -38,10 +38,9 @@
                   <div class="col-12">
                     <div class="car_slider_seperator"></div>
                   </div>
-                  <div class="col-1 col-lg-12">
+
+                  <div class="col-6 col-lg-12">
                     <h5>From:</h5>
-                  </div>
-                  <div class="col-4 col-lg-12">
                     <?php echo $product->get_price_html(); ?>
                   </div>
                   <div class="col-6 col-lg-12">
@@ -53,7 +52,7 @@
                     </div>
                     <div class="col-lg-6 col-12">
 
-                        <a href="<?php echo get_permalink() ?>" >
+                        <a href="#" >
                   <?php the_post_thumbnail('', array('class' => 'd-block img-fluid mx-auto slider-image')); ?>
                   </a>
                   </div>
@@ -110,10 +109,9 @@
                           <div class="col-12">
                             <div class="car_slider_seperator"></div>
                           </div>
-                          <div class="col-1 col-lg-12">
-                            <h5>From:</h5>
-                          </div>
-                          <div class="col-4 col-lg-12">
+
+                          <div class="col-6 col-lg-12">
+                              <h5>From:</h5>
                             <?php echo $product->get_price_html(); ?>
                           </div>
                           <div class="col-6 col-lg-12">
@@ -125,7 +123,7 @@
                           </div>
                           <div class="col-lg-6 col-12">
 
-                              <a href="<?php echo get_permalink() ?>" >
+                              <a href="#" >
                         <?php the_post_thumbnail('', array('class' => 'd-block img-fluid mx-auto slider-image')); ?>
                         </a>
                         </div>
