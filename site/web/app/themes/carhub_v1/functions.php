@@ -580,10 +580,10 @@ function bootstrap_styles_for_gravityforms_fields($content, $field, $value, $lea
 
 
 // Populate Contact form Locations field with dropdown of Location posts
-add_filter( 'gform_pre_render_2', 'populate_posts' );
-add_filter( 'gform_pre_validation_2', 'populate_posts' );
-add_filter( 'gform_pre_submission_filter_2', 'populate_posts' );
-add_filter( 'gform_admin_pre_render_2', 'populate_posts' );
+add_filter( 'gform_pre_render_4', 'populate_posts' );
+add_filter( 'gform_pre_validation_4', 'populate_posts' );
+add_filter( 'gform_pre_submission_filter_4', 'populate_posts' );
+add_filter( 'gform_admin_pre_render_4', 'populate_posts' );
 function populate_posts( $form ) {
 
     foreach ( $form['fields'] as &$field ) {
