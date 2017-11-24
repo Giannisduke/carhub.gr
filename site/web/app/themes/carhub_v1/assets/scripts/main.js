@@ -44,7 +44,7 @@ $('selected').html(post_name);
 $('.dropdown-item').click(function(){
 $('.chosen').html($(this).text() + '<span class="caret"></span>');
 });
-  $('.js-example-basic-single').select2();
+  $('.js-example-basic-single').select2({ width: '100%' });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
