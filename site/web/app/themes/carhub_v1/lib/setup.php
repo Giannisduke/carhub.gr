@@ -107,7 +107,16 @@ function assets() {
 $suffix = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   //wp_enqueue_script('sage/gijgo', Assets\asset_path('scripts/gijgo.js'), ['sage/js'], null, true);
-  //wp_enqueue_script('sage/booking-form', Assets\asset_path('scripts/booking-form.js'), ['sage/js'], null, true);
+  wp_enqueue_script('sage/add-to-cart', Assets\asset_path('scripts/add-to-cart.js'), array( 'jquery' ), WC_VERSION, true );
+//  wp_enqueue_script( 'wc-bookings-booking-form', WC_BOOKINGS_PLUGIN_URL . '/assets/js/booking-form.js', array( 'jquery', 'jquery-blockui' ), WC_BOOKINGS_VERSION, true );
+  //wp_enqueue_script( 'wc-bookings-date-picker', WC_BOOKINGS_PLUGIN_URL . '/assets/js/date-picker.js', array( 'wc-bookings-booking-form', 'jquery-ui-datepicker', 'underscore' ), WC_BOOKINGS_VERSION, true );
+  wp_enqueue_script('sage/cart-fragments', Assets\asset_path('scripts/cart-fragments.js'), array( 'jquery', 'js-cookie' ), WC_VERSION, true );
+
+  wp_enqueue_script('sage/single-product', Assets\asset_path('scripts/single-product.js'), array( 'jquery' ), WC_VERSION, true );
+  wp_enqueue_script('sage/woocommerce', Assets\asset_path('scripts/woocommerce.js'), ['sage/js'], null, true);
+
+
+
   ///wp_enqueue_script('sage/date-picker', Assets\asset_path('scripts/date-picker.js'), ['sage/js'], null, true);
 
 

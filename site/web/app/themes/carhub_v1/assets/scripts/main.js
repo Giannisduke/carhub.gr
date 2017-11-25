@@ -31,11 +31,17 @@
 
         });
 
+
+  $.ajaxSetup({cache:false});
 var $openform = $('.openform');
 $openform.click(function(){
 var $this = $(this);
+var post_url = $this.attr('data-href');
 var post_name = $this.attr('data-car-choise');
 TweenLite.to(window, 1, {scrollTo:{y:".feedback", offsetY:160}});
+$(".feedback").html('<div class="loading">loading...</div>');
+$('.feedback').load('http://carhub.dev/web/app/themes/carhub_v1/woocommerce-bookings/single-product/add-to-cart/booking.php');
+
 
 
 $('selected').html(post_name);

@@ -46,7 +46,7 @@
                   <h5><?php echo $product->get_price_html(); ?></h5>
                   </div>
                   <div class="col-6 col-lg-12">
-                    <button type="button" class="btn btn-primary btn-lg btn-block openform" data-car-choise="<?php echo $product->get_name(); ?>">Book Now!</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block openform" data-car-choise="<?php echo $product->get_name(); ?>" data-href="<?php echo $product->get_permalink(); ?>">Book Now!</button>
                   </div>
                     </div>
                       </div>
