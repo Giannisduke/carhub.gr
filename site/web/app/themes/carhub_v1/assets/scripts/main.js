@@ -69,6 +69,11 @@ $('.chosen').html($(this).text() + '<span class="caret"></span>');
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
+        $('#applicant-form').ajaxForm({
+          success: function(response){
+            console.log(response);
+          }
+        });
       }
     },
     // About us page, note the change from about-us to about_us.

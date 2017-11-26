@@ -612,3 +612,8 @@ function populate_posts( $form ) {
 }
 
 add_filter("gform_confirmation_anchor_5", create_function("","return false;"));
+
+add_action('wp_ajax_create_applicant', 'create_applicant');
+function create_applicant(){
+  wp_send_json_success( $_POST );
+}
